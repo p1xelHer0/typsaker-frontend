@@ -1,0 +1,125 @@
+import { CodeSurfer } from "mdx-deck-code-surfer";
+import { Notes } from "mdx-deck";
+export { default as theme } from "./theme";
+import { codeTheme } from "./theme";
+
+import oceanicNext from "prism-react-renderer/themes/oceanicNext";
+
+import App from "../example-js/src/SimpleExample/App";
+
+# Typsäker frontend i TypeScript | ReasonML
+
+---
+
+# Pontus Nagy
+
+### @p1xelHer0
+
+```notes
+
+```
+
+---
+
+<CodeSurfer
+  title="JavaScript"
+  code={require("!raw-loader!./assets/Functions.js")}
+  lang="javascript"
+  theme={codeTheme}
+  showNumbers={false}
+  dark={true}
+  steps={[
+    {},
+    { range: [1, 1 + 2], notes: "function keyword" },
+    { lines: [5], notes: "arrow function" },
+    { range: [7, 7 + 2], notes: "" },
+    { lines: [11], notes: "" },
+    { lines: [13], notes: "" },
+    {},
+  ]}
+/>
+
+```notes
+
+```
+
+---
+
+<CodeSurfer
+  title="Typer"
+  code={require("!raw-loader!./assets/BasicTypes.ts")}
+  lang="typescript"
+  theme={codeTheme}
+  dark={true}
+  steps={[
+    {}, 
+    { range: [1, 1+1], notes: ""},
+    { range: [4, 4+4], notes: ""},
+    { range: [10, 10+5], notes: ""},
+    { range: [17, 17+2], notes: ""},
+    { range: [21, 21+3], notes: ""},
+    {}
+  ]}
+/>
+---
+
+<CodeSurfer
+  title="Ett simpelt exempel"
+  code={require("!raw-loader!./assets/SimpleExample.jsx")}
+  lang="javascript"
+  theme={codeTheme}
+  showNumbers={false}
+  dark={true}
+  steps={[
+    {},
+    { range: [2, 5], notes: "State" },
+    { range: [7, 12], notes: "🌀 ➞ 📦 ➞ 📊" },
+    { range: [14, 24], notes: "🌀 + 📊" },
+    {},
+  ]}
+/>
+
+```notes
+
+```
+
+---
+
+<CodeSurfer
+  title="TypeScript"
+  code={require("!raw-loader!./assets/Functions.ts")}
+  lang="typescript"
+  theme={codeTheme}
+  showNumbers={false}
+  dark={true}
+  steps={[
+    {},
+    { range: [1, 1 + 2], notes: "" },
+    { lines: [5], notes: "" },
+    { range: [7, 7 + 2], notes: "" },
+    { tokens: { 1: [5, 6, 7, 8] } },
+    { tokens: { 1: [9, 10, 11, 12] } },
+    { tokens: { 1: [4, 5, 6, 7, 8, 9, 10, 11, 12] } },
+    { tokens: { 5: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13] } },
+    { tokens: { 7: [4, 5, 6, 7, 8, 9, 10, 11, 12, 13] } },
+    { lines: [11], noted: "" },
+    { range: [13, 13 + 2], noted: "" },
+  ]}
+/>
+
+```notes
+
+```
+
+---
+
+- Om vi laddar data, visa spinner
+- Om vi har data, visa data
+
+```notes
+
+```
+
+---
+
+# Tack för att ni lyssnade❣️
