@@ -5,21 +5,23 @@ import coy from "react-syntax-highlighter/styles/prism/coy";
 import prismTypescript from "react-syntax-highlighter/languages/prism/typescript";
 import prismReason from "react-syntax-highlighter/languages/prism/reason";
 
+export const dark = false;
+
 const bg = "#221811";
 const fg = "#b4b8c9";
 const font = "Iosevka";
 
-export default {
+// for dark, use my own theme
+const exportTheme = {
   ...theme,
   font,
   monospace: font,
   colors: {
     ...theme.colors,
-    background: bg,
-    text: fg,
+    background: dark ? bg : "white",
+    text: dark ? fg : "black",
   },
   prism: {
-    style: coy,
     languages: {
       typescript: prismTypescript,
       reason: prismReason,
@@ -27,6 +29,7 @@ export default {
   },
 };
 
+// colors based in my terminal
 const alacritty = {
   black: "#221811",
   red: "#915E67",
@@ -39,6 +42,7 @@ const alacritty = {
   comment: "#7d808c",
 };
 
+// colors mapped to the theme parts
 const colors = {
   foreground: fg,
   backgrund: bg,
@@ -56,120 +60,126 @@ const colors = {
   operator: "#fc929e",
 };
 
-export const codeTheme = {
-  plain: {
-    backgroundColor: colors.background,
-    color: colors.foreground,
-  },
-  styles: [
-    {
-      types: ["attr-name"],
-      style: {
-        color: colors.keyword,
-      },
+export let codeTheme;
+
+if (dark) {
+  codeTheme = {
+    plain: {
+      backgroundColor: colors.background,
+      color: colors.foreground,
     },
-    {
-      types: ["attr-value"],
-      style: {
-        color: colors.string,
+    styles: [
+      {
+        types: ["attr-name"],
+        style: {
+          color: colors.keyword,
+        },
       },
-    },
-    {
-      types: ["comment", "block-comment", "prolog", "doctype", "cdata"],
-      style: {
-        color: colors.comment,
+      {
+        types: ["attr-value"],
+        style: {
+          color: colors.string,
+        },
       },
-    },
-    {
-      types: [
-        "property",
-        "number",
-        "function-name",
-        "constant",
-        "symbol",
-        "deleted",
-      ],
-      style: {
-        color: colors.primitive,
+      {
+        types: ["comment", "block-comment", "prolog", "doctype", "cdata"],
+        style: {
+          color: colors.comment,
+        },
       },
-    },
-    {
-      types: ["boolean"],
-      style: {
-        color: colors.boolean,
+      {
+        types: [
+          "property",
+          "number",
+          "function-name",
+          "constant",
+          "symbol",
+          "deleted",
+        ],
+        style: {
+          color: colors.primitive,
+        },
       },
-    },
-    {
-      types: ["tag"],
-      style: {
-        color: colors.tag,
+      {
+        types: ["boolean"],
+        style: {
+          color: colors.boolean,
+        },
       },
-    },
-    {
-      types: ["string"],
-      style: {
-        color: colors.string,
+      {
+        types: ["tag"],
+        style: {
+          color: colors.tag,
+        },
       },
-    },
-    {
-      types: ["punctuation"],
-      style: {
-        color: colors.foreground,
+      {
+        types: ["string"],
+        style: {
+          color: colors.string,
+        },
       },
-    },
-    {
-      types: ["selector", "char", "builtin", "inserted"],
-      style: {
-        color: colors.char,
+      {
+        types: ["punctuation"],
+        style: {
+          color: colors.foreground,
+        },
       },
-    },
-    {
-      types: ["function"],
-      style: {
-        color: colors.function,
+      {
+        types: ["selector", "char", "builtin", "inserted"],
+        style: {
+          color: colors.char,
+        },
       },
-    },
-    {
-      types: ["operator", "entity", "url", "variable"],
-      style: {
-        color: colors.variable,
+      {
+        types: ["function"],
+        style: {
+          color: colors.function,
+        },
       },
-    },
-    {
-      types: ["keyword"],
-      style: {
-        color: colors.keyword,
+      {
+        types: ["operator", "entity", "url", "variable"],
+        style: {
+          color: colors.variable,
+        },
       },
-    },
-    {
-      types: ["at-rule", "class-name"],
-      style: {
-        color: colors.className,
+      {
+        types: ["keyword"],
+        style: {
+          color: colors.keyword,
+        },
       },
-    },
-    {
-      types: ["important"],
-      style: {
-        fontWeight: "400",
+      {
+        types: ["at-rule", "class-name"],
+        style: {
+          color: colors.className,
+        },
       },
-    },
-    {
-      types: ["bold"],
-      style: {
-        fontWeight: "bold",
+      {
+        types: ["important"],
+        style: {
+          fontWeight: "400",
+        },
       },
-    },
-    {
-      types: ["italic"],
-      style: {
-        fontStyle: "italic",
+      {
+        types: ["bold"],
+        style: {
+          fontWeight: "bold",
+        },
       },
-    },
-    {
-      types: ["namespace"],
-      style: {
-        opacity: 0.7,
+      {
+        types: ["italic"],
+        style: {
+          fontStyle: "italic",
+        },
       },
-    },
-  ],
-};
+      {
+        types: ["namespace"],
+        style: {
+          opacity: 0.7,
+        },
+      },
+    ],
+  };
+}
+
+export default exportTheme;

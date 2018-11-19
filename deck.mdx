@@ -3,7 +3,7 @@ import { Appear, Head } from "mdx-deck";
 import { Split } from "mdx-deck/layouts";
 
 export { default as theme } from "./theme";
-import { codeTheme } from "./theme";
+import { codeTheme, dark } from "./theme";
 
 import App from "../example-js/src/SimpleExample/App";
 
@@ -122,7 +122,7 @@ Var är en typ?
 <CodeSurfer
   title="JavaScript"
   code={require("!raw-loader!./assets/Functions.js")}
-  dark={true}
+  dark={dark}
   lang="typescript"
   theme={codeTheme}
   showNumbers={false}
@@ -145,7 +145,7 @@ JavaScript
 <CodeSurfer
   title="TypeScript"
   code={require("!raw-loader!./assets/FunctionsTSCompiler.ts")}
-  dark={true}
+  dark={dark}
   lang="typescript"
   theme={codeTheme}
   showNumbers={false}
@@ -171,7 +171,7 @@ olika varianter av plus
 <CodeSurfer
   title="Annoteringar"
   code={require("!raw-loader!./assets/Functions.ts")}
-  dark={true}
+  dark={dark}
   lang="typescript"
   theme={codeTheme}
   showNumbers={false}
@@ -208,7 +208,7 @@ olika varianter av plus
 <CodeSurfer
   title="Typer"
   code={require("!raw-loader!./assets/BasicTypes.ts")}
-  dark={true}
+  dark={dark}
   lang="typescript"
   theme={codeTheme}
   showNumbers={false}
@@ -235,7 +235,7 @@ Tuple, nytt! Flera typer, fix längd
 <CodeSurfer
   title="Polymorphism"
   code={require("!raw-loader!./assets/Polymorphism.ts")}
-  dark={true}
+  dark={dark}
   lang="typescript"
   theme={codeTheme}
   showNumbers={false}
@@ -261,7 +261,7 @@ Funktion -> Typ
 <CodeSurfer
   title="Interfaces"
   code={require("!raw-loader!./assets/Interfaces.ts")}
-  dark={true}
+  dark={dark}
   lang="typescript"
   theme={codeTheme}
   showNumbers={false}
@@ -298,7 +298,7 @@ Definiera egna typer, type keyword
 
 ---
 
-# 🤙 ➞ 🌀 ➞ 📦 ➞ 📊
+# 🤙 ➞ 🌀 ➞ 📊
 
 ```notes
 Tjena resurs, ge mig data
@@ -309,5 +309,81 @@ Visa data
 
 ---
 
+<CodeSurfer
+  title="Interfaces"
+  code={require("!raw-loader!./assets/1State.ts")}
+  dark={dark}
+  lang="typescript"
+  theme={codeTheme}
+  showNumbers={false}
+  steps={[
+    { range: [1, 1 + 4], notes: "" },
+    { range: [6, 6 + 4], notes: "" },
+    {},
+  ]}
+/>
+
+```notes
+datafrom ej relevat
+```
+
+---
+
+<CodeSurfer
+  title="🤙 ➞ 🌀 ➞ 📊"
+  code={require("!raw-loader!./assets/1StateUse.ts")}
+  dark={dark}
+  lang="typescript"
+  theme={codeTheme}
+  showNumbers={false}
+  steps={[
+    { range: [1, 1 + 3], notes: "🤙" },
+    { range: [6, 6 + 1], notes: "🌀" },
+    { range: [9, 9 + 3], notes: "📊" },
+    {},
+  ]}
+/>
+
+```notes
+börja bolla frågan, problem?
+vi kan vara explicitare, vi har TS!
+```
+
+---
+
+## --strictNullCheck
+
+```notes
+compiler-inställning
+inkrementel adoption
+```
+
+---
+
+<CodeSurfer
+  title="🤙 ➞ 🌀 ➞ 📊"
+  code={require("!raw-loader!./assets/1StateUse.ts")}
+  dark={dark}
+  lang="typescript"
+  theme={codeTheme}
+  showNumbers={false}
+  steps={[{ range: [1, 1 + 5], notes: "" }]}
+/>
+
+```notes
+null !== data
+```
+
+---
+
+## |
+
+```notes
+"pipe"
+förmodligen sett tidigare
+vad TROR ni det betyder?
+```
+
+---
 
 # Tack för att ni lyssnade❣️
