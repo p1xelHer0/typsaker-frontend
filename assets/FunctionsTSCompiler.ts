@@ -1,10 +1,10 @@
-function hello(name: string): void {
+function hello(name) {
   console.log("Hello " + name);
 }
 
-const exclamation = (word: string): string => word + "!";
+const exclamation = word => word + "!";
 
-const shoutHello = (name: string): void => {
+const shoutHello = name => {
   hello(exclamation(name));
 };
 

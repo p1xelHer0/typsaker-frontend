@@ -1,0 +1,33 @@
+Vem är jag?
+
+Mina erfarenheter, på och utanför jobb -> lett till typade språk, ofta funktionella
+
+Typer leder till säkerhet, "typsäker"
+dokumentation
+illegal state
+refaktorering
+Om detta är mina 3 "varför", så motivera, varför varför?
+
+varför leder typescript, eller ett typsystem, till detta?
+
+innan jag berättar det, så måste jag förklara grunderna i typescript, vad är det? var är en "typ"?
+
+en typ beskriver vilka former en "sak" kan ha, vardagligt pratat.
+
+en bool är sann ELLER falsk.
+ett nummer är en siffra
+en sträng är en eller flera bokstäver
+
+interfaces, "objekt", fast typade
+
+funktioner
+
+compile time vs run time!
+
+parametrisk polymorphism
+kan ses som en funktion som ger oss en konkret typ
+exempel, array!
+
+compile time, igen
+
+använda dessa byggstenar!

@@ -2,7 +2,7 @@ function hello(name) {
   console.log("Hello " + name);
 }
 
-const exclamation = string => string + "!";
+const exclamation = word => word + "!";
 
 const shoutHello = name => {
   hello(exclamation(name));
