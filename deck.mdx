@@ -35,10 +35,15 @@ twitter, github, osv
 
 ```notes
 Första jobb
+
 Andra jobb
+
 Redux -> FP + Typer
+
 Galen i funktionella typade språk
+
 * Ej jobb, endast fritid
+
 Nytt uppdrag, nytt språk, TypeScript
 ```
 
@@ -50,6 +55,7 @@ Nytt uppdrag, nytt språk, TypeScript
 
 ```notes
 Min resa
+
 Vi ska prata om typer, i form av TypeScript
 ```
 
@@ -69,6 +75,7 @@ målet är "aah, därför!"
 
 ```notes
 Vad menar jag?
+
 "Låt datorn hålla koll"
 ```
 
@@ -84,7 +91,9 @@ Vad menar jag?
 
 ```notes
 Agila team, iterativt med krav som ändras
-Typer kan bestämma logik
+
+Typer kan bestämma logik och fungera som delvis dokumentation
+
 Miljöer bortom kod kan ha problem, testning och blabla
 ```
 
@@ -106,6 +115,7 @@ _TypeScript is a typed superset of JavaScript that compiles to plain JavaScript.
 
 ```notes
 Allt som är JavaScript kan också kompileras av TypeScript.
+
 Värdefullt i editor-tooling, utan compiler i kodbas!
 ```
 
@@ -161,7 +171,9 @@ JavaScript
 
 ```notes
 TypeScript!
+
 "Type inference"
+
 word, ej typ ännu, "!" är dock det
 olika varianter av plus
 ```
@@ -224,9 +236,13 @@ olika varianter av plus
 
 ```notes
 Boolean
+
 Number
+
 String
+
 Array, endast en typ T, variabel längd
+
 Tuple, nytt! Flera typer, fix längd
 ```
 
@@ -252,7 +268,9 @@ Tuple, nytt! Flera typer, fix längd
 
 ```notes
 Varör är dom spännande?
+
 En typ som tar en typ som parameter
+
 Funktion -> Typ
 ```
 
@@ -274,7 +292,9 @@ Funktion -> Typ
 
 ```notes
 Varör är dom spännande?
+
 En typ som tar en typ som parameter
+
 Funktion -> Typ
 ```
 
@@ -291,8 +311,11 @@ Funktion -> Typ
 
 ```notes
 Typer
+
 Polymorphism, typer som tar typer som parameter
+
 Typer bestående av andra typer
+
 Definiera egna typer, type keyword
 ```
 
@@ -302,8 +325,11 @@ Definiera egna typer, type keyword
 
 ```notes
 Tjena resurs, ge mig data
+
 Visa spinner
+
 Få tillbaka paketet, data
+
 Visa data
 ```
 
@@ -346,6 +372,7 @@ datafrom ej relevat
 
 ```notes
 börja bolla frågan, problem?
+
 vi kan vara explicitare, vi har TS!
 ```
 
@@ -355,7 +382,12 @@ vi kan vara explicitare, vi har TS!
 
 ```notes
 compiler-inställning
+
 inkrementel adoption
+
+hantera null som ett unikt värde
+
+säkrare kod!
 ```
 
 ---
@@ -378,11 +410,421 @@ null !== data
 
 ## |
 
+<Appear>
+  <div>||</div>
+  <div>const v = a || 0;</div>
+  <div>"eller"</div>
+  <div>disjunktion</div>
+</Appear>
+
 ```notes
 "pipe"
+
 förmodligen sett tidigare
+
 vad TROR ni det betyder?
 ```
+
+---
+
+<CodeSurfer
+  title="🤙 ➞ 🌀 ➞ 📊"
+  code={require("!raw-loader!./assets/2State.ts")}
+  dark={dark}
+  lang="typescript"
+  theme={codeTheme}
+  showNumbers={false}
+/>
+
+```notes
+
+```
+
+---
+
+<CodeSurfer
+  title="🤙 ➞ 🌀 ➞ 📊"
+  code={require("!raw-loader!./assets/2StateUse.ts")}
+  dark={dark}
+  lang="typescript"
+  theme={codeTheme}
+  showNumbers={false}
+/>
+
+```notes
+nu funkar det!
+```
+
+---
+
+## Union
+
+```notes
+union typ
+
+vi ska visa några exempel
+```
+
+---
+
+<CodeSurfer
+  title="Union"
+  code={require("!raw-loader!./assets/Union.ts")}
+  dark={dark}
+  lang="typescript"
+  theme={codeTheme}
+  showNumbers={false}
+  steps={[
+    { lines: [1], notes: "" },
+    { lines: [3], notes: "" },
+    { range: [5, 5 + 7], notes: "" },
+    { range: [14, 14 + 7], notes: "" },
+    { range: [14, 14 + 9], notes: "" },
+  ]}
+/>
+
+```notes
+tillåter oss att specificera värden
+
+kombination med tidigare sätt vi sett
+```
+
+---
+
+<CodeSurfer
+  title="Union som en mängd"
+  code={require("!raw-loader!./assets/UnionInSets.ts")}
+  dark={dark}
+  lang="typescript"
+  theme={codeTheme}
+  showNumbers={false}
+  steps={[
+    { range: [1, 1 + 2], notes: "" },
+    { lines: [5], notes: "" },
+    { lines: [6], notes: "" },
+    { range: [6, 6 + 3], notes: "" },
+  ]}
+/>
+
+```notes
+tillbaka till skolan, mängdlära
+
+addition och ta bort dubletter
+
+union, syskon till produkt
+```
+
+---
+
+<CodeSurfer
+  title="Interface som en produkt"
+  code={require("!raw-loader!./assets/InterfaceAsAProduct.ts")}
+  dark={dark}
+  lang="typescript"
+  theme={codeTheme}
+  showNumbers={false}
+  steps={[
+    { range: [1, 1 + 3], notes: "" },
+    { lines: [6], notes: "" },
+    { lines: [8], notes: "" },
+    { lines: [10], notes: "" },
+    { lines: [11], notes: "" },
+    { lines: [12], notes: "" },
+    { lines: [13], notes: "" },
+    { range: [8, 8 + 5], notes: "2 x 2 = 4" },
+    { range: [1, 13], notes: "(1 + 1) x (1 + 1) = 4" },
+  ]}
+/>
+
+```notes
+Om | är union, då är interface en produkt
+```
+
+---
+
+## 🤙 ➞ 🌀 ➞ 📊
+
+<Appear>
+  <div>{"{loading: false, data: null}"} 🤙</div>
+  <div>{"{loading: true, data: null}"} 🌀</div>
+  <div>{"{loading: false, data: data}"} 📊</div>
+  <div>...</div>
+  <div>{"{loading: true, data: data}"} 🐛</div>
+</Appear>
+
+```notes
+Gå tillbaka till vår app
+
+initialt värde
+
+skicka frågan, visa spinner
+
+få tillbaka, visa data
+
+...
+
+men det fjärde då? bug!
+
+"trivialt", men om det existerar buggar i detta kontext, under hur mycket det finns i större applikationer
+```
+
+---
+
+## Varför? - "Making illegale state unrepresentable"
+
+### 🧨 🐛
+
+```notes
+3 states enligt krav, 4 enligt koden
+
+dags att döda buggen
+
+med det vi lärt oss om produkter, unioner och TypeScript
+```
+
+---
+
+<Appear>
+  <div>3 = x * y</div>
+  <div>3 = x + y</div>
+  <div>3 = 2 + 1</div>
+  <br />
+  <div>2 = 1 + 1</div>
+  <div>3 = 1 + 1 + 1</div>
+</Appear>
+
+```notes
+produkt eller summa? heltal! inga halva typer
+```
+
+---
+
+<CodeSurfer
+  title="Interface som en produkt"
+  code={require("!raw-loader!./assets/UnionSolve1.ts")}
+  dark={dark}
+  lang="typescript"
+  theme={codeTheme}
+  showNumbers={false}
+  steps={[
+    { lines: [1], notes: "" },
+    { lines: [3], notes: "" },
+    { range: [5, 5 + 1], notes: "" },
+    { range: [8, 8 + 2], notes: "" },
+  ]}
+/>
+
+```notes
+union till räddning
+
+ganska lätt att räkna
+```
+
+---
+
+## ...
+
+---
+
+## Varför? - Refaktorering
+
+```notes
+jag har ett nytt förslag
+```
+
+---
+
+## Diskriminering
+
+```notes
+men, jag har ett förslag
+
+vi ska diskriminera...
+
+våra unioner
+```
+
+---
+
+<CodeSurfer
+  title="Diskriminerad Union"
+  code={require("!raw-loader!./assets/DiscriminatedUnion.ts")}
+  dark={dark}
+  lang="typescript"
+  theme={codeTheme}
+  showNumbers={false}
+  steps={[
+    { range: [1, 1 + 6], notes: "" },
+    { range: [9, 9 + 6], notes: "" },
+    { range: [17, 17 + 8], notes: "" },
+    { lines: [27], notes: "" },
+  ]}
+/>
+
+```notes
+
+```
+
+---
+
+<CodeSurfer
+  title="🤙 ➞ 🌀 ➞ 📊"
+  code={require("!raw-loader!./assets/DiscriminatedSwitch.ts")}
+  dark={dark}
+  lang="typescript"
+  theme={codeTheme}
+  showNumbers={false}
+  steps={[
+    { range: [1, 1 + 26], notes: "" },
+    { lines: [29], notes: "" },
+    { range: [31, 31 + 1], notes: "" },
+    { range: [34, 34 + 2], notes: "" },
+    { range: [38, 38 + 9], notes: "" },
+  ]}
+/>
+
+```notes
+
+```
+
+---
+
+<CodeSurfer
+  title="Refaktorering"
+  code={require("!raw-loader!./assets/DiscriminatedSwitch2.ts")}
+  dark={dark}
+  lang="typescript"
+  theme={codeTheme}
+  showNumbers={false}
+  steps={[{ range: [1, 1 + 5], notes: "" }, { range: [8, 8 + 9], notes: "" }]}
+/>
+
+```notes
+vi vill hantera fel, lägg till det!
+
+oj, koden kompilerar inte, undefined !== string
+
+vi TVINGAS hantera switchen
+
+"exhaustive pattern matching"
+```
+
+---
+
+## Vad har vi lärt oss?
+
+<Appear>
+  <div>TypeScript, delvis!</div>
+  <div>Polymorphism</div>
+  <div>Mängdlära, Unioner och Produkter</div>
+  <div>Diskriminerade Unioner</div>
+</Appear>
+
+```notes
+type inference, typannoteringar, skapa våra egna typer
+
+typer som tar typer som parameter, listor t.ex.
+```
+
+---
+
+## Buzzword-check!
+
+<Appear>
+  <h3>Simplare</h3>
+  <div>3 &lt; 4</div>
+  <h3>Lättare att förändra</h3>
+  <div>Exhaustive pattern matching</div>
+  <h3>Korrektare</h3>
+  <div>4 != 3</div>
+</Appear>
+
+```notes
+förmågan att utrycka MINDRE är underskattad
+
+vi tvingas hantera alla nya fall
+```
+
+---
+
+## "Populära diskriminerade unioner"
+
+```notes
+illustrering av discriminated union i andra språk
+
+koncept i språk som Haskell, Ocaml, Rust, nu i Java
+```
+
+---
+
+<CodeSurfer
+  title="Diskriminerade unioner"
+  code={require("!raw-loader!./assets/Maybe.ts")}
+  dark={dark}
+  lang="typescript"
+  theme={codeTheme}
+  showNumbers={false}
+  steps={[
+    { range: [1, 1 + 9], notes: "" },
+    { range: [11, 11 + 11], notes: "" },
+    {},
+  ]}
+/>
+
+```notes
+Optional i Java, istället för null
+
+För att hämta pekare i Rust, inga null pointers!
+
+I språk där null inte finns, t.ex. Haskell eller OCaml
+```
+
+---
+
+## ...
+
+---
+
+---
+
+## "... | ReasonML" ?
+
+---
+
+<CodeSurfer
+  title="ReasonML"
+  code={require("!raw-loader!./assets/Reason.re")}
+  dark={dark}
+  lang="reason"
+  theme={codeTheme}
+  showNumbers={false}
+  steps={[
+    { range: [1, 1 + 4], notes: "" },
+    { range: [6, 6 + 7], notes: "" },
+    {},
+  ]}
+/>
+
+```notes
+Statiskt typad funktionellt programmeringsspråk som kompileras till JS
+
+Inget speciellt behövs för diskriminerade unioner
+
+bättre type inference, den gissa bättre
+
+Expressions istället för statements
+
+Default immutability
+
+TypeScript är jobb
+Det här är coolt
+
+Mer saker jag inte hinner berätta om!
+```
+
+---
+
+## https://reasonml.github.io/
 
 ---
 

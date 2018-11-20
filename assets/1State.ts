@@ -1,9 +1,9 @@
 interface State {
   loading: boolean;
-  data: data;
+  data: Data;
 }
 
-interface data {
+interface Data {
   name: string;
   surname: string;
   age: number;

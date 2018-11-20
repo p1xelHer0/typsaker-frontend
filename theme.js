@@ -5,7 +5,7 @@ import coy from "react-syntax-highlighter/styles/prism/coy";
 import prismTypescript from "react-syntax-highlighter/languages/prism/typescript";
 import prismReason from "react-syntax-highlighter/languages/prism/reason";
 
-export const dark = false;
+export const dark = true;
 
 const bg = "#221811";
 const fg = "#b4b8c9";

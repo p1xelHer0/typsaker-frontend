@@ -1,4 +1,4 @@
 interface State {
   loading: boolean;
-  data: data | null;
+  data: Data | null;
 }
