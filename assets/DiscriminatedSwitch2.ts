@@ -3,7 +3,7 @@ interface ServerError {
   data: ErrorObject,
 }
 
-type State = NotLoaded | Loading | Loaded | Error;
+type State = NotLoaded | Loading | Loaded | ServerError;
 
 function showData(state: State): string {
   switch (state.discriminator) {
