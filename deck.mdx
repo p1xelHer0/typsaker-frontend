@@ -165,6 +165,7 @@ JavaScript
     { range: [7, 7 + 2], notes: "" },
     { lines: [11], notes: "" },
     { range: [13, 15], notes: "" },
+    { tokens: { 5: [8, 9, 10, 11, 12] }, notes: "+, infix" },
     {},
   ]}
 />
@@ -600,7 +601,7 @@ produkt eller summa? heltal! inga halva typer
 ---
 
 <CodeSurfer
-  title="Interface som en produkt"
+  title="Ett första utkast, Union"
   code={require("!raw-loader!./assets/UnionSolve1.ts")}
   dark={dark}
   lang="typescript"
@@ -618,6 +619,8 @@ produkt eller summa? heltal! inga halva typer
 union till räddning
 
 ganska lätt att räkna
+
+men inte superlätt att arbeta med
 ```
 
 ---
@@ -647,7 +650,7 @@ våra unioner
 ---
 
 <CodeSurfer
-  title="Diskriminerad Union"
+  title="Tillbaka till mängdläran"
   code={require("!raw-loader!./assets/DiscriminatedUnion.ts")}
   dark={dark}
   lang="typescript"
@@ -658,6 +661,8 @@ våra unioner
     { range: [9, 9 + 6], notes: "" },
     { range: [17, 17 + 8], notes: "" },
     { lines: [27], notes: "" },
+    { lines: [29], notes: "" },
+    { range: [31, 31 + 6], notes: "" },
   ]}
 />
 
@@ -684,7 +689,9 @@ våra unioner
 />
 
 ```notes
+simpelt att fånga varje fall
 
+autocomplete, data finns bara på Loaded!
 ```
 
 ---
@@ -716,8 +723,7 @@ vi TVINGAS hantera switchen
 <Appear>
   <div>TypeScript, delvis!</div>
   <div>Polymorphism</div>
-  <div>Mängdlära, Unioner och Produkter</div>
-  <div>Diskriminerade Unioner</div>
+  <div>Mängdlära, Unioner, Produkter och Summor</div>
 </Appear>
 
 ```notes
@@ -825,6 +831,10 @@ Mer saker jag inte hinner berätta om!
 ---
 
 ## https://reasonml.github.io/
+
+---
+
+## Frågor?
 
 ---
 

@@ -5,7 +5,7 @@ interface ServerError {
 
 type State = NotLoaded | Loading | Loaded | ServerError;
 
-function showData(state: State): string {
+function showData(state: State): string { // error
   switch (state.discriminator) {
     case "NotLoaded":
       return "🤙";
